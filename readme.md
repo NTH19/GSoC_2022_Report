@@ -4,7 +4,7 @@
 
 Project : MariaDB ColumnStore MCOL-4995
 
-This project goal is to implement basic vectorized filtering at ARM platforms for Mariadb Column Store Engine.
+This project goal is to implement basic vectorized filtering for Mariadb Column Store Engine.
 
 ## Introduction
 
@@ -12,7 +12,7 @@ During my participation in the Mariadb as a GSoC2022 student.I have made servera
 
 * Implement vectorized filtering for MCS. This is the main task.I use serveral ways to implement it.
   
-  I first used the arm neon to implement it.Because MCS already has vectorized filtering which uses SSE.I need to unify arm neon and SSE to provide the same interface for upper layer.Due to that ,it has a little performance loss.If we want to unify the behavior of simdProcessor, we have to make concessions.It is a trade-off.
+  I need to unify arm neon and SSE to provide the same interface for upper layer.Due to that ,it has a little performance loss.If we want to unify the behavior of simdProcessor, we have to make concessions.It is a trade-off.Then I implement vectorized filtering for MCS.
   
   We get some excellent result from micro benchmark.
   
